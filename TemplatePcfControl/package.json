@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Project containing your PowerApps Component Framework (PCF) control.",
   "scripts": {
+    "authenticate": "pac auth create --environment https://crxpartnersd.crm4.dynamics.com --name CRXPD",
+    "deploy": "pac auth select --name CRXPD && pac pcf push --solution-unique-name CRXPPCFControls --environment https://crxpartnersd.crm4.dynamics.com",
+    "buildAndDeployDev": "npm run build && npm run deploy",
+    "buildAndDeployProd": "pac pcf version -s manifest && npm run buildAndDeployDEV",
     "build": "pcf-scripts build",
     "clean": "pcf-scripts clean",
     "lint": "pcf-scripts lint",
@@ -10,12 +14,10 @@
     "rebuild": "pcf-scripts rebuild",
     "start": "pcf-scripts start",
     "start:watch": "pcf-scripts start watch",
-    "refreshTypes": "pcf-scripts refreshTypes",
-    "createZipFile": "npm run build && cd FetchXmlControlSolution && msbuild /t:build /restore",
-    "importSolution": "pac solution import --path \"FetchXmlControlSolution\\bin\\Debug\\FetchXmlControlSolution.zip\" --publish-changes",
-    "buildAndUpload": "echo 'Building solution...' && npm run createZipFile && echo 'Importing solution...' && npm run importSolution"
+    "refreshTypes": "pcf-scripts refreshTypes"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@microsoft/eslint-plugin-power-apps": "^0.2.51",

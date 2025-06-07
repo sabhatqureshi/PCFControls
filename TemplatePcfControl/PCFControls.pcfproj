@@ -8,8 +8,8 @@
   <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.props" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.props')" />
 
   <PropertyGroup>
-    <Name>FetchXmlPcfComponent</Name>
-    <ProjectGuid>3820c0e5-fea9-4012-9cd1-395d40553e46</ProjectGuid>
+    <Name>PCFControls</Name>
+    <ProjectGuid>308599d0-19b8-44bb-99b5-7d3547eb6577</ProjectGuid>
     <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
   </PropertyGroup>
 
@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="1.9.9" />
+    <PackageReference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="1.*" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
 

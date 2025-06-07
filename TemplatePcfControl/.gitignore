@@ -1,0 +1,59 @@
+# Node modules (do not commit dependencies)
+node_modules/
+
+# Output folders for PCF
+out/
+controls/
+obj/
+
+# Power Platform Solution (ignore everything in the solution folder)
+solution/
+
+# Build output for most JS projects
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Environment variable files
+.env
+.env.*
+
+# VS Code settings
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Power Platform CLI logs and temp files
+*.nupkg
+*.snupkg
+*.user
+*.suo
+*.psess
+PowerAppsToolsTemp*
+
+# Coverage reports
+coverage/
+
+# Test results
+test-results/
+
+# MacOS system files
+.AppleDouble
+.LSOverride
+
+# Windows image file caches
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Remove package-lock and yarn lock if you don't want to track lock files
+# package-lock.json
+# yarn.lock
